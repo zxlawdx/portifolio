@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Projetos desenvolvidos</h2>
+
+    <ul>
+        @for(itens of arrayProjects(); track itens){
+        <li>
+            <button (click)="openDialog(itens)">
+                <span class="image-box">
+                    <img 
+                        [src]="itens.src"
+                        [alt]="itens.alt"
+                        loading="lazy"
+                    />
+                </span>
+            </button>
+        </li>
+        }
+    </ul>
+</div>

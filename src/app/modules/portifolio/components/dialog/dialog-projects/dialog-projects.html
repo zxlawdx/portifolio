@@ -1,0 +1,20 @@
+<header>
+  <h2 mat-dialog-title>{{ project()?.title }}</h2>
+  <button (click)="closeModal()" class="btn-close"></button>
+</header>
+
+<mat-dialog-content>
+  <h3>Descrição</h3>
+  <article [innerHTML]="project()?.description"></article>
+
+  <nav>
+    <a
+      [href]="project()?.links?.url"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn"
+    >
+      {{ project()?.links?.name }}
+    </a>
+  </nav>
+</mat-dialog-content>

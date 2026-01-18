@@ -1,0 +1,72 @@
+:host{
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+
+    header, h3, p{
+        padding: 0;
+        margin: 0 0 15px;
+    }
+
+    mat-dialog-content{
+        padding: 0;
+        margin: 0 0 15px;
+    }
+
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2{
+            font-size: 22px;
+            padding: 0;
+            margin: 0;
+            color: var(--black-010);
+        }
+
+        .btn-close{
+            background-image: url("../../../../../../../public/icon/close.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 16px 16px;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        h3{
+            font-size: 18px;
+            color: var(--black-010);
+        }
+
+        article{
+            margin-bottom: 15px;
+
+            p{
+                font-size: 16px;
+            }
+        }
+
+        nav{
+            display: flex;
+        }
+
+       
+        
+    }
+
+    .btn{
+        background: var(--primary);
+        width: 200px;
+        border-radius:  5px;
+        height: 80;
+    }
+}
+
+::ng-deep .dialog-container-projects .mdc-dialog__container{
+    width: 850px;
+}

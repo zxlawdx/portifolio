@@ -1,0 +1,69 @@
+:host {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        text-align: center;
+        margin: 0 0 25px 0;
+    }
+
+    details {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 10px;
+        background: var(--black-010);
+        border-radius: 7px;
+
+        article,
+        summary {
+            padding: 10px 20px;
+            transition: 300ms ease-out;
+        }
+
+        summary {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--primary);
+            position: relative; // necessário pro ::after
+
+            p {
+                font-size: 14px;
+                color: var(--black-010);
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            /* ÍCONE PADRÃO */
+            &::after {
+                content: '';
+                width: 16px;
+                height: 16px;
+                flex-shrink: 0;
+                background-color: var(--black-010);
+                mask: url('../../../../../../public/img/chevron-down.svg') no-repeat center;
+                mask-size: contain;
+            }
+        }
+
+        /* QUANDO ABERTO */
+        &[open] {
+            summary::after {
+                mask: url('../../../../../../public/img/chevron-up.svg') no-repeat center;
+                mask-size: contain;
+            }
+        }
+
+        article {
+            background: var(--black-010);
+            line-height: 1.5;
+        }
+    }
+}
